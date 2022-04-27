@@ -1,0 +1,7 @@
+read_verilog verilog/counter.v
+read_liberty -lib ./lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+synth -top counter
+dfflibmap -liberty ./lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ./lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+show
